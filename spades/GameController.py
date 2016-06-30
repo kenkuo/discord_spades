@@ -2,13 +2,13 @@ import pydealer as pyd
 class GameController():
 	players = []
 
-	def is_players_empty:
+	def is_players_empty():
 		if len(players) == 0:
 			return True
 		else:
 			return False
 
-	def is_players_full:
+	def is_players_full():
 		if len(players) == 4:
 			return True
 		else:
@@ -35,10 +35,12 @@ class GameController():
 		return trick
 
 	def calc_trick_winner(trick):
-		highest_card = Card()
-		for card in trick:
-			if card.suit == 'Spade':
+		highest_card = pyd.Card()
+		# for card in trick:
+		# 	if card.suit == 'Spade':
 	
-	def suit_sort(stack):
-		stack.ranks = const.
-
+	def suit_sort(self, stack):
+		stack.ranks = pyd.const.DEFAULT_RANKS
+		stack.sort()
+		stack.ranks = pyd.const.SUITS
+		stack.sort()

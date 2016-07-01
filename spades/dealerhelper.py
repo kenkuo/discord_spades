@@ -10,6 +10,19 @@ def spades_sort(stack):
 	stack.ranks = suits_rank
 	stack.sort()
 
+def custom_str(self):
+	symbol = 'a'
+	if self.suit == 'Diamond':
+		symbol = '♦'
+	elif self.suit == 'Spade':
+		symbol = '♠'
+	elif self.suit == 'Heart':
+		symbol = '♥'
+	elif self.suit == 'Club':
+		symbol = '♣'
+	return self.value + symbol
+
+pyd.Card.__str__ = custom_str
 pyd.Stack.spades_sort = spades_sort
 
 suits_rank = {
